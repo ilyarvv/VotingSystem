@@ -54,11 +54,6 @@ contract VotingSystem {
         return sessionTopics;
     }
 
-    // Получение результатов конкретной сессии голосования
-    function getSessionResults(uint sessionId) public view returns (Option[] memory) {
-        require(sessionId < votingSessions.length, "Invalid session ID");
-        return votingSessions[sessionId].options;
-    }
 
     // Получение деталей конкретной сессии голосования (темы и опций)
     function getVotingSessionDetails(uint sessionId) public view returns (string memory, Option[] memory) {
